@@ -1,0 +1,2 @@
+computeMatrix reference-point --referencePoint center -R   chirp_FC3_p0.05_summit.bed  -S  MLT2A1_input_R1.bigWig  MLT2A1_CHIRP_R1.bigWig  -b 3000 -a 3000 -p 35 --skipZeros --missingDataAsZero -o  CHIRP_FC3_p0.05.gz 
+plotHeatmap -m  CHIRP_FC3_p0.05.gz  --colorMap Blues -out   CHIRP_FC3_p0.05.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "CHIRP_FC3_p0.05"  

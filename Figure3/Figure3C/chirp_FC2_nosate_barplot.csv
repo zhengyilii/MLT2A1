@@ -1,0 +1,17 @@
+condition,TE,percentage
+chirp_intergenic,LINE,28.75191424
+chirp_intergenic,SINE,7.69525268
+chirp_intergenic,LTR,46.50331802
+chirp_intergenic,noTE,17.04951506
+chirp_intron,LINE,33.35679925
+chirp_intron,SINE,12.04974774
+chirp_intron,LTR,32.26563417
+chirp_intron,noTE,22.32781884
+chirp_promoter,LINE,0.704346332
+chirp_promoter,SINE,2.50816011
+chirp_promoter,LTR,1.735097062
+chirp_promoter,noTE,95.0523965
+chirp_UTR_exon,LINE,1.111238401
+chirp_UTR_exon,SINE,3.184786344
+chirp_UTR_exon,LTR,1.993355482
+chirp_UTR_exon,noTE,93.71061977
