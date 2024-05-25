@@ -1,0 +1,5 @@
+computeMatrix scale-regions  -R  toti_like_cell_3st_fusion_MLT2A1.bed  -S  DUX4_OE1_srt.bw DUX4_OE2_srt.bw DUX4_ASO1_srt.bw DUX4_ASO2_srt.bw   --beforeRegionStartLength 300  --regionBodyLength 160   --afterRegionStartLength 300  --missingDataAsZero -p 35  -o toti_like_cell_fusion_MLT2A1_DUX4OE_ASO.gz
+plotHeatmap -m  toti_like_cell_fusion_MLT2A1_DUX4OE_ASO.gz  --colorMap Blues -out   toti_like_cell_fusion_MLT2A1_DUX4OE_ASO.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+computeMatrix scale-regions  -R  DUX4_3st_fusion_MLT2A1_transcript.bed  -S  DUX4_OE1_srt.bw DUX4_OE2_srt.bw DUX4_ASO1_srt.bw DUX4_ASO2_srt.bw   --beforeRegionStartLength 300  --regionBodyLength 380   --afterRegionStartLength 300  --missingDataAsZero -p 35  -o toti_like_cell_fusion_transcript_MLT2A1_DUX4OE_ASO.gz
+plotHeatmap -m  toti_like_cell_fusion_transcript_MLT2A1_DUX4OE_ASO.gz  --colorMap Blues -out   toti_like_cell_fusion_transcript_MLT2A1_DUX4OE_ASO.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  

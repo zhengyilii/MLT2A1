@@ -1,0 +1,4 @@
+computeMatrix scale-regions  -R  GRCh38_rmsk_MLT2A1.bed  -S  DUX4_OE1_srt.bw DUX4_OE2_srt.bw DUX4_ASO1_srt.bw DUX4_ASO2_srt.bw   --beforeRegionStartLength 500  --regionBodyLength 500   --afterRegionStartLength 500  --missingDataAsZero -p 35  -o MLT2A1_DUX4OE_MLT2A1_ASO.gz
+plotHeatmap -m  MLT2A1_DUX4OE_MLT2A1_ASO.gz  --colorMap Blues -out   MLT2A1_DUX4OE_MLT2A1_ASO.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+bigwig files used in this figure can be downloaded in GSE268270
