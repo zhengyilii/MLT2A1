@@ -1,0 +1,22 @@
+#find motif:
+findMotifsGenome.pl chirp_promoter.bed  ./hg38/  ./chirp_promoter_motif/  -size 200 -p 38
+findMotifsGenome.pl chirp_3UTR.bed  ./hg38/  ./chirp_3UTR_motif/  -size 200 -p 38
+
+#build blastn database:
+bedtools getfasta -fi ./Homo_sapiens.GRCh38.dna.primary_assembly.fa  -bed  DUX4_3st_fusion_MLT2A1.bed -name -s -fullHeader  -fo DUX4_fusion_2A1.fa
+
+makeblastdb -in DUX4_fusion_2A1.fa  -dbtype nucl -out ./seq3_blast/DUX_fusion_2A1.blastdb
+
+bedtools getfasta -fi ./Homo_sapiens.GRCh38.dna.primary_assembly.fa  -bed  DUX4_3st_fusion_MLT2A1.bed -name -s -fullHeader  -fo DUX4_fusion_2A1_transcript.fa
+
+makeblastdb -in DUX4_fusion_2A1.fa  -dbtype nucl -out ./seq3_blast/DUX_fusion_2A1_transcript.blastdb
+
+#find motif in DUX4OE fusion MLT2A1 and fusion transcript sequence
+
+blastn -query  ./motif_chirp/promoter.fa   -out  ./motif_chirp/promoter_10_DUX_fusion_2A1_blast.xls -db  ./seq3_blast/DUX_fusion_2A1.blastdb -task blastn-short  -num_threads  30  -outfmt 7 
+
+blastn -query  ./motif_chirp/promoter.fa   -out  ./motif_chirp/promoter_10_DUX_fusion_2A1_transcript_blast.xls -db  ./seq3_blast/DUX_fusion_2A1_transcript.blastdb -task blastn-short  -num_threads  30  -outfmt 7
+
+blastn -query  ./motif_chirp/3UTR.fa   -out  ./motif_chirp/3UTR_10_DUX_fusion_2A1_blast.xls -db  ./seq3_blast/DUX_fusion_2A1.blastdb -task blastn-short  -num_threads  30  -outfmt 7 
+
+blastn -query  ./motif_chirp/3UTR.fa   -out  ./motif_chirp/3UTR_10_DUX_fusion_2A1_transcript_blast.xls -db  ./seq3_blast/DUX_fusion_2A1_transcript.blastdb -task blastn-short  -num_threads  30  -outfmt 7

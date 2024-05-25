@@ -1,0 +1,15 @@
+MLT2A1_chirp_exp_noexp_2A1:
+computeMatrix reference-point  --referencePoint center -R  DUX_exp_2A1.bed  DUX_noexp_2A1.bed  -S  MLT2A1_input_R1.bigWig  MLT2A1_CHIRP_R1.bigWig   -b 500 -a 500 --missingDataAsZero -p 35  -o DUX_exp_noexp_2A1_CHIRP.gz
+plotHeatmap -m  DUX_exp_noexp_2A1_CHIRP.gz  --colorMap Blues -out   DUX_exp_noexp_2A1_CHIRP.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+DUX4OE_exp_noexp_2A1:
+computeMatrix reference-point  --referencePoint center -R  DUX_exp_2A1.bed  DUX_noexp_2A1.bed  -S  nodox_merge.bw  DUX4_merge.bw   -b 500 -a 500 --missingDataAsZero -p 35  -o DUX4OE_exp_noexp_2A1.gz
+plotHeatmap -m  DUX4OE_exp_noexp_2A1.gz  --colorMap Blues -out   DUX4OE_exp_noexp_2A1.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+MLT2A1_chirp_exp_noexp_2A2:
+computeMatrix reference-point  --referencePoint center -R  DUX_exp_2A2.bed  DUX_noexp_2A2.bed  -S  MLT2A1_input_R1.bigWig  MLT2A1_CHIRP_R1.bigWig   -b 500 -a 500 --missingDataAsZero -p 35  -o DUX_exp_noexp_2A2_CHIRP.gz
+plotHeatmap -m  DUX_exp_noexp_2A2_CHIRP.gz  --colorMap Blues -out   DUX_exp_noexp_2A2_CHIRP.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression" 
+
+DUX4OE_exp_noexp_2A2:
+computeMatrix reference-point  --referencePoint center -R  DUX_exp_2A2.bed  DUX_noexp_2A2.bed  -S  nodox_merge.bw  DUX4_merge.bw   -b 500 -a 500 --missingDataAsZero -p 35  -o DUX4OE_exp_noexp_2A2.gz
+plotHeatmap -m  DUX4OE_exp_noexp_2A2.gz  --colorMap Blues -out   DUX4OE_exp_noexp_2A2.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  

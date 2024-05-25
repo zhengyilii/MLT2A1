@@ -1,0 +1,10 @@
+obtain shuffle bed file of chirp peak:
+bedtools shuffle -i chirp_peak.bed -g hg38.genome > chirp_shuffle.bed
+
+obtain gene list of MLT2A1 KD DEGs of chirp peak different distance:
+bedtools window -a chirp_peak.bed -b DUX4_2A1ASO_down.bed -w 200000 > chirp_DUX4_2A1ASO_down_200kb.bed
+bedtools window -a chirp_peak_shuffle.bed -b DUX4_2A1ASO_down.bed -w 200000 > chirp_shuffle_DUX4_2A1ASO_down_200kb.bed
+
+fisher's exact test:
+bedtools fisher -a chirp_peak.bed -b DUX4ASO_down_200kb.bed -i hg38.genome > chirp_DUX4ASO_down_fisher.txt
+
