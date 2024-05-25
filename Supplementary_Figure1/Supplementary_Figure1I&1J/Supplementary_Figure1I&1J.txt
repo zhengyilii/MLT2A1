@@ -1,0 +1,7 @@
+FigureS1I:
+computeMatrix scale-regions  -R  GRCh38_rmsk_MLT2A1.bed  -S  Zygote_merge.bw  2C_merge.bw  4C_merge.bw  8C_merge.bw  Morula_merge.bw  ICM_merge.bw  TE_merge.bw  --beforeRegionStartLength 500  --regionBodyLength 500   --afterRegionStartLength 500  --missingDataAsZero -p 35  -o MLT2A1_RNA.gz
+plotHeatmap -m  MLT2A1_RNA.gz  --colorMap Blues -out   MLT2A1_embryo_RNA.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+FigureS1J:
+computeMatrix scale-regions  -R  GRCh38_rmsk_MLT2A1.bed  -S  Zygote_ATAC.bw  2C_ATAC.bw  4C_ATAC.bw  8C_ATAC.bw  Morula_ATAC.bw  ICM_ATAC.bw  TE_ATAC.bw  --beforeRegionStartLength 500  --regionBodyLength 500   --afterRegionStartLength 500  --missingDataAsZero -p 35  -o MLT2A1_ATAC.gz
+plotHeatmap -m  MLT2A1_ATAC.gz  --colorMap Blues -out   MLT2A1_embryo_ATAC.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "Chromatin accessibility"  

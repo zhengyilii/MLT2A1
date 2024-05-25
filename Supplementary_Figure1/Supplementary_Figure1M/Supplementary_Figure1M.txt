@@ -1,0 +1,10 @@
+FigureS1M:
+left：
+computeMatrix scale-regions  -R  GRCh38_rmsk_MLT2A1.bed  -S   TESR-1.bw  TESR-2.bw  DUX4OE-1.bw  DUX4OE-2.bw --beforeRegionStartLength 500  --regionBodyLength 500   --afterRegionStartLength 500  --missingDataAsZero -p 35  -o MLT2A1_DUX4OE.gz
+
+plotHeatmap -m  MLT2A1_DUX4OE.gz  --colorMap Blues -out   MLT2A1_DUX4OE.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
+
+right:
+computeMatrix scale-regions  -R  GRCh38_rmsk_MLT2A1.bed  -S  E4CL_con1.bw  E4CL_con2 .bw  e4CL_rep1.bw  e4CL_rep2.bw  --beforeRegionStartLength 500  --regionBodyLength 500   --afterRegionStartLength 500  --missingDataAsZero -p 35  -o MLT2A1_e4cl.gz
+
+plotHeatmap -m  MLT2A1_e4cl.gz  --colorMap Blues -out   MLT2A1_e4cl.pdf  --heatmapHeight 15 --heatmapWidth 5   --plotTitle "RNA expression"  
